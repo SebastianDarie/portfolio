@@ -1,0 +1,152 @@
+---
+import MainHead from '../components/MainHead.astro';
+import Footer from '../components/Footer/index.jsx';
+import Nav from '../components/Nav/index.jsx';
+import ProjectPreview from '../components/ProjectPreview/index.tsx';
+
+const projects = Astro.fetchContent('./project/*.md')
+  .filter(({ published_at }) => !!published_at)
+  .sort((a, b) => new Date(b.published_at) - new Date(a.published_at));
+---
+
+<html lang="en">
+  <head>
+    <MainHead title="All Projects | Sebastian Darie" />
+    <style lang="scss">
+      .content-container {
+        font-size: 17px;
+        line-height: 20px;
+        font-family: 'Lato', sans-serif;
+      }
+
+      .content {
+        margin: auto;
+        margin-left: calc(2px + 7.5vw);
+        max-width: 88%;
+        padding-bottom: 90px;
+        padding-top: 35px;
+      }
+
+      .content article.about {
+        margin-bottom: 35px;
+      }
+
+      .content a {
+        text-decoration: none;
+        color: #2841a6;
+      }
+
+      .content a:hover,
+      .content a:active {
+        color: inherit;
+        text-decoration: underline;
+      }
+
+      .content ul {
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+
+      .content li {
+        font-weight: normal;
+      }
+
+      .content ul > li:before {
+        color: black;
+        font-weight: normal;
+        content: '- ';
+      }
+
+      .content li > article {
+        margin-top: 30px;
+        max-width: 780px;
+      }
+
+      .content .sub-list {
+        font-weight: normal;
+      }
+
+      .content img {
+        border: 1px solid #22212647;
+        margin: -10px 20px 25px 0;
+        max-height: 120px;
+        display: inline-block;
+      }
+
+      .content li > a > h2,
+      .content li > h2,
+      .content li h3,
+      .content li h4 {
+        display: inline;
+      }
+
+      .content .project-showcase {
+        line-height: 1.4em;
+      }
+
+      .content .project-showcase h2 {
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        line-height: 31px;
+      }
+
+      .content .project-showcase > li {
+        margin-bottom: 80px;
+      }
+
+      .content .project-showcase li:before {
+        content: none;
+      }
+
+      .content .project-showcase > li {
+        padding-top: 13px;
+        border-top: 1px solid #22212647;
+        max-width: 780px;
+      }
+
+      .grid {
+        display: grid;
+        grid-gap: 3;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <a href='/'>home</a>
+          </li>
+          <li>
+            <a href='/projects'>projects</a>
+          </li>
+          <li>
+            <a href='/'>home</a>
+          </li>
+          <li>
+            <a href='/'>home</a>
+          </li>
+        </ul>
+      </nav>
+      <section class="title">
+        <h1>projects</h1>
+      </section>
+    </header>
+    <div class="content-container">
+      <section class="content">
+        <article class="about">
+          <p>Here are some things I've worked on.</p>
+          <p>Click on a project to be taken to the specific project page.</p>
+          <p>My information is on the home page.</p>
+        </article>
+        <section class="information">
+          <div class="grid">
+            {projects.map((project) => (
+              <ProjectPreview project={project} />
+            ))}
+          </div>
+        </section>
+      </section>
+    </div>
+  </body>
+</html>
