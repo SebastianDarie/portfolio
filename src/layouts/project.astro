@@ -1,8 +1,8 @@
 ---
 import MainHead from '../components/MainHead.astro';
-import Button from '../components/Button/index.jsx';
-import Footer from '../components/Footer/index.jsx';
-import Nav from '../components/Nav/index.jsx';
+// import Button from '../components/Button/index.jsx';
+// import Footer from '../components/Footer/index.jsx';
+// import Nav from '../components/Nav/index.jsx';
 
 const { content } = Astro.props;
 ---
@@ -29,13 +29,13 @@ const { content } = Astro.props;
         text-transform: uppercase;
 
         &:nth-of-type(1n) {
-          color: var(--c-green);
+          color: var(--c-blue);
         }
         &:nth-of-type(2n) {
           color: var(--c-orange);
         }
         &:nth-of-type(3n) {
-          color: var(--c-blue);
+          color: var(--c-green);
         }
         &:nth-of-type(4n) {
           color: var(--c-pink);
@@ -67,7 +67,7 @@ const { content } = Astro.props;
     </style>
   </head>
   <body>
-    <Nav />
+    <!-- <Nav /> -->
     <header style={`background-image:url(${content.img})`} class="hero">
       <h1 class="title">{content.title}</h1>
     </header>
@@ -84,9 +84,9 @@ const { content } = Astro.props;
     </div>
     <footer class="tac mt6">
       <a href="/projects">
-        <Button>View More</Button>
+        <!-- <Button>View More</Button> -->
       </a>
     </footer>
-    <Footer />
+    <!-- <Footer /> -->
   </body>
 </html>

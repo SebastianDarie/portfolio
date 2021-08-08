@@ -1,8 +1,7 @@
 ---
 import MainHead from '../components/MainHead.astro';
-import Button from '../components/Button/index.jsx';
-import Footer from '../components/Footer/index.jsx';
-import PorfolioPreview from '../components/PortfolioPreview/index.jsx';
+// import Footer from '../components/Footer/index.jsx';
+// import PorfolioPreview from '../components/PortfolioPreview/index.jsx';
 
 const projects = Astro.fetchContent('./project/**/*.md');
 const featuredProject = projects[0];
@@ -186,11 +185,11 @@ const featuredProject = projects[0];
               <a href='/projects'>projects</a>
             </li>
             <li>
-              <a href='/'>home</a>
+              <a href='/about'>about</a>
             </li>
-            <li>
+            <!-- <li>
               <a href='/'>home</a>
-            </li>
+            </li> -->
           </ul>
         </nav>
       </div>

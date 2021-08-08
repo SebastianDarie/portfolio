@@ -1,7 +1,6 @@
 ---
+import { Markdown } from 'astro/components';
 import MainHead from '../components/MainHead.astro';
-import Footer from '../components/Footer/index.jsx';
-import Nav from '../components/Nav/index.jsx';
 import ProjectPreview from '../components/ProjectPreview/index.tsx';
 
 const projects = Astro.fetchContent('./project/*.md')
@@ -104,9 +103,24 @@ const projects = Astro.fetchContent('./project/*.md')
         max-width: 780px;
       }
 
-      .grid {
-        display: grid;
-        grid-gap: 3;
+      .react {
+        color: #61dafb;
+      }
+
+      .firebase {
+        color: #ffca28;
+      }
+
+      .graphql {
+        color: #e535ab;
+      }
+
+      .postgres {
+        color: #0064a5;
+      }
+
+      .typescript {
+        color: #007acc;
       }
     </style>
   </head>
@@ -121,11 +135,11 @@ const projects = Astro.fetchContent('./project/*.md')
             <a href='/projects'>projects</a>
           </li>
           <li>
-            <a href='/'>home</a>
+            <a href='/about'>about</a>
           </li>
-          <li>
+          <!-- <li>
             <a href='/'>home</a>
-          </li>
+          </li> -->
         </ul>
       </nav>
       <section class="title">
@@ -136,15 +150,77 @@ const projects = Astro.fetchContent('./project/*.md')
       <section class="content">
         <article class="about">
           <p>Here are some things I've worked on.</p>
-          <p>Click on a project to be taken to the specific project page.</p>
+          <p>Click on an image to be taken to the specific page on the site.</p>
           <p>My information is on the home page.</p>
         </article>
         <section class="information">
-          <div class="grid">
-            {projects.map((project) => (
-              <ProjectPreview project={project} />
-            ))}
-          </div>
+          <ul class="project-showcase">
+            <li>
+              <a href="https://twitter-clone-c0b2e.web.app/" target="_blank">
+                <h2>Twitter Clone</h2>
+              </a>
+              <article>
+                <a href="https://twitter-clone-c0b2e.web.app/" target="_blank">
+                  <img src="assets/twitter-clone.png" alt="home page">
+                </a>
+                <a href="https://twitter-clone-c0b2e.web.app/Alexander%20III" target="_blank">
+                  <img src="assets/twitter-profile.png" alt="profile page">
+                </a>
+                <a href="https://twitter-clone-c0b2e.web.app/tweet/DCqBjRMXiOsdmM7PO6RA" target="_blank">
+                  <img src="assets/twitter-tweet.png" alt="tweet page">
+                </a>
+                <p>
+                  This react app was made and designed with the intentions to replicate Twitter's core functionality.
+                  This single page app is built with <span class="react">React(CRA)</span> and <span class="firebase">Firebase</span>.
+                  Firebase is used as a BaaS which provides all of the CRUD functionality, the data is then stored in Redux. 
+                  For styling it uses Styled-Components. It implements the suggested code-splitting methods by React like React.lazy and Suspense.
+                  Some of its core features are user profiles, tweets, hearts, retweets, comments, following, search functionality both for users and tweets.
+                </p>
+              </article>
+            </li>
+
+            <li>
+              <a href="https://reddit-clone.tech/" target="_blank">
+                <h2>Reddit Clone</h2>
+              </a>
+              <article>
+                <a href="https://reddit-clone.tech/" target="_blank">
+                  <img src="assets/reddit-clone.png" alt="home page">
+                </a>
+                <a href="https://reddit-clone.tech/user/ben" target="_blank">
+                  <img src="assets/reddit-user.png" alt="user page">
+                </a>
+                <a href="https://reddit-clone.tech/r/React" target="_blank">
+                  <img src="assets/reddit-community.png" alt="community page">
+                </a>
+                <p>
+                  This site was built to include Reddit's core features. Features a new tech stack that I've never previously worked it
+                  including Next.js instead of the traditional CRA, <span class="graphql">GraphQL</span> with Apollo, as well as a relational
+                  database <span class="postgres">Postgres</span>. It's also the first time I started using <span class="typescript">Typescript</span>
+                  in my projects. For styling it uses Chakra UI which provides a very convinient dark mode. It includes user profiles, 
+                  communities, filtering posts, creation of 3 types of posts, comments(nested), upvotes, random avatar on user creation just like Reddit.
+                </p>
+              </article>
+            </li>
+
+            <li>
+              <a href="https://mernlabs.team/" target="_blank">
+                <h2>Airbnb Clone</h2>
+              </a>
+              <article>
+                <a href="https://mernlabs.team/" target="_blank">
+                  <img src="assets/airbnb-clone.png" alt="home page">
+                </a>
+                <a href="" target="_blank">
+                  <img src="" alt="">
+                </a>
+                <a href="" target="_blank">
+                  <img src="" alt="">
+                </a>
+                <p></p>
+              </article>
+            </li>
+          </ul>
         </section>
       </section>
     </div>

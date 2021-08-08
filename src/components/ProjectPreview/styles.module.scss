@@ -1,3 +1,30 @@
+.projectLink {
+  color: #2841a6;
+  text-decoration: none;
+
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  &:active,
+  &:hover {
+    color: inherit;
+    text-decoration: underline;
+  }
+}
+
+.article {
+  margin-top: 30px;
+  max-width: 780px;
+}
+
+.projectImg {
+  border: 1px solid #22212647;
+  margin: -10px 20px 25px 0;
+  max-height: 120px;
+  display: inline-block;
+}
+
 .card {
   position: relative;
   color: var(--t-bg);
@@ -25,7 +52,6 @@
 .titleCard {
   position: relative;
   background-size: cover;
-  background-position: 50% 100%;
   padding-top: 37.5%;
 }
 
@@ -89,13 +115,13 @@
   margin-left: 0.5em;
 
   &:nth-of-type(1n) {
-    color: var(--c-green);
+    color: var(--c-blue);
   }
   &:nth-of-type(2n) {
     color: var(--c-orange);
   }
   &:nth-of-type(3n) {
-    color: var(--c-blue);
+    color: var(--c-green);
   }
   &:nth-of-type(4n) {
     color: var(--c-pink);
