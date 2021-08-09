@@ -103,6 +103,10 @@ const projects = Astro.fetchContent('./project/*.md')
         max-width: 780px;
       }
 
+      .text {
+        margin-bottom: 20px;
+      }
+
       .react {
         color: #61dafb;
       }
@@ -121,6 +125,24 @@ const projects = Astro.fetchContent('./project/*.md')
 
       .typescript {
         color: #007acc;
+      }
+
+      .sourceCode {
+        color: #3a4453;
+        text-decoration: none;
+        background-color: transparent;
+        border: 3px solid #d9dee6;
+        padding: 5px 10px;
+        border-radius: 2px;
+        font-weight: 400;
+        font-size: 20px;
+        transition: 0.2s;
+
+        &:hover {
+          color: #3a4453 !important;
+          background-color: #d9dee6;
+          text-decoration: none !important;
+        }
       }
     </style>
   </head>
@@ -156,68 +178,85 @@ const projects = Astro.fetchContent('./project/*.md')
         <section class="information">
           <ul class="project-showcase">
             <li>
-              <a href="https://twitter-clone-c0b2e.web.app/" target="_blank">
+              <a href="https://twitter-clone-c0b2e.web.app/" target="_blank" rel="noreferrer noopener">
                 <h2>Twitter Clone</h2>
               </a>
               <article>
-                <a href="https://twitter-clone-c0b2e.web.app/" target="_blank">
+                <a href="https://twitter-clone-c0b2e.web.app/" target="_blank" rel="noreferrer noopener">
                   <img src="/assets/twitter-clone.png" alt="home page">
                 </a>
-                <a href="https://twitter-clone-c0b2e.web.app/Alexander%20III" target="_blank">
+                <a href="https://twitter-clone-c0b2e.web.app/Alexander%20III" target="_blank" rel="noreferrer noopener">
                   <img src="/assets/twitter-profile.png" alt="profile page">
                 </a>
-                <a href="https://twitter-clone-c0b2e.web.app/tweet/DCqBjRMXiOsdmM7PO6RA" target="_blank">
+                <a href="https://twitter-clone-c0b2e.web.app/tweet/DCqBjRMXiOsdmM7PO6RA" target="_blank" rel="noreferrer noopener">
                   <img src="/assets/twitter-tweet.png" alt="tweet page">
                 </a>
-                <p>
-                  This react app was made and designed with the intentions to replicate Twitter's core functionality.
-                  This single page app is built with <span class="react">React(CRA)</span> and <span class="firebase">Firebase</span>.
+                <p class="text">
+                  This react app was made and designed to replicate Twitter's core functionality. This single page app 
+                  is built with <span class="react">React(CRA)</span> and <span class="firebase">Firebase</span>.
                   Firebase is used as a BaaS which provides all of the CRUD functionality, the data is then stored in Redux. 
                   For styling it uses Styled-Components. It implements the suggested code-splitting methods by React like React.lazy and Suspense.
                   Some of its core features are user profiles, tweets, hearts, retweets, comments, following, search functionality both for users and tweets.
                 </p>
+                <a href="https://github.com/SebastianDarie/Twitter-Clone" target="_blank" rel="noreferrer noopener" class="sourceCode">
+                  Source Code
+                </a>
               </article>
             </li>
 
             <li>
-              <a href="https://reddit-clone.tech/" target="_blank">
+              <a href="https://reddit-clone.tech/" target="_blank" rel="noreferrer noopener">
                 <h2>Reddit Clone</h2>
               </a>
               <article>
-                <a href="https://reddit-clone.tech/" target="_blank">
+                <a href="https://reddit-clone.tech/" target="_blank" rel="noreferrer noopener">
                   <img src="/assets/reddit-clone.png" alt="home page">
                 </a>
-                <a href="https://reddit-clone.tech/user/ben" target="_blank">
+                <a href="https://reddit-clone.tech/user/ben" target="_blank" rel="noreferrer noopener">
                   <img src="/assets/reddit-user.png" alt="user page">
                 </a>
-                <a href="https://reddit-clone.tech/r/React" target="_blank">
+                <a href="https://reddit-clone.tech/r/React" target="_blank" rel="noreferrer noopener">
                   <img src="/assets/reddit-community.png" alt="community page">
                 </a>
-                <p>
-                  This site was built to include Reddit's core features. Features a new tech stack that I've never previously worked it
+                <p class="text">
+                  This site was built to include Reddit's core features. Features a new tech stack that I've never previously worked with
                   including Next.js instead of the traditional CRA, <span class="graphql">GraphQL</span> with Apollo, as well as a relational
-                  database <span class="postgres">Postgres</span>. It's also the first time I started using <span class="typescript">Typescript</span>
-                  in my projects. For styling it uses Chakra UI which provides a very convinient dark mode. It includes user profiles, 
-                  communities, filtering posts, creation of 3 types of posts, comments(nested), upvotes, random avatar on user creation just like Reddit.
+                  database <span class="postgres">PostgreSQL</span>. It's also the first time I started using <span class="typescript">Typescript</span>
+                  in my projects. For styling, it uses Chakra UI which provides a very convenient dark mode. It includes user profiles, 
+                  communities, filtering posts, creation of 3 types of posts, comments(nested), upvotes, random avatars on user creation just like Reddit.
                 </p>
+                <a href="https://github.com/SebastianDarie/reddit-clone" target="_blank" rel="noreferrer noopener" class="sourceCode">
+                  Source Code
+                </a>
               </article>
             </li>
 
             <li>
-              <a href="https://mernlabs.team/" target="_blank">
+              <a href="https://mernlabs.team/" target="_blank" rel="noreferrer noopener">
                 <h2>Airbnb Clone</h2>
               </a>
               <article>
-                <a href="https://mernlabs.team/" target="_blank">
+                <a href="https://mernlabs.team/" target="_blank" rel="noreferrer noopener">
                   <img src="/assets/airbnb-clone.png" alt="home page">
                 </a>
-                <a href="" target="_blank">
+                <a href="" target="_blank" rel="noreferrer noopener">
                   <img src="" alt="">
                 </a>
-                <a href="" target="_blank">
+                <a href="" target="_blank" rel="noreferrer noopener">
                   <img src="" alt="">
                 </a>
-                <p></p>
+                <p class="text">
+                  This project was built with the hypebeast stack which benefits both the client and the developer. As the name implies
+                  the app integrates Airbnb's core functionality like browsing listings based on location or map movement, reservations with
+                  payments and refunds, category-based ratings with reviews, messaging between hosts and guests, and other smaller features.
+                  This time for styling I choose <span class="graphql">Sass</span> instead of UI libraries. This was also my first time using
+                  <span class="postgres">Postgis</span> and the Google Maps API which worked flawlessly compared to other map providers like
+                  Bing, Mapbox, Yandex, and Leaflet that don't have nearly as much support and packages available(especially for React).
+                  I've also learned about the Stripe API which is easy to use and has good <span class="typescript">Typescript</span> support.
+                </p>
+                <a href="https://github.com/SebastianDarie/airbnb-clone" target="_blank" rel="noreferrer noopener" class="sourceCode">
+                  Source Code
+                </a>
               </article>
             </li>
           </ul>

@@ -3,9 +3,10 @@ const { title = 'Sebastian Darie' } = Astro.props;
 ---
 
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Sebastian Darie's Portfolio">
 <title>{title}</title>
 <link rel="stylesheet" type="text/css" href="/styles/global.css">
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" 
+as="style" onload="this.onload=null;this.rel='stylesheet'">
