@@ -1,0 +1,108 @@
+---
+import MainHead from '../components/MainHead.astro';
+---
+
+<html lang="en">
+  <head>
+    <MainHead title="Resume | Sebastian Darie" />
+    <style lang="scss">
+        .resume {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 auto;
+            width: 90%;
+            padding: 40px 5px;
+            border-top: 2px solid var(--c-font);
+            color: var(--c-bg);
+            font-size: 18px;
+            font-weight: 300;
+
+            h2 {
+                margin-bottom: 20px;
+            }
+
+            a {
+                color: var(--c-bg);
+                text-decoration: none;
+                background-color: transparent;
+                border: 3px solid var(--c-font);
+                padding: 5px 10px;
+                border-radius: 2px;
+                font-weight: 400;
+                font-size: 20px;
+                transition: 0.2s;
+
+                &:hover {
+                color: var(--c-bg) !important;
+                background-color: var(--c-font);
+                text-decoration: none !important;
+                }
+            }
+        }
+
+        .resumeLinks {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            a {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                img {
+                    height: 15px;
+                    margin-left: 5px;
+                }
+            }
+        
+            a:first-of-type {
+                margin-bottom: 10px;
+            }
+
+            @media screen and (min-width: 650px){
+                flex-direction: row;
+
+                a:first-of-type {
+                    margin-bottom: 0;
+                    margin-right: 5px;
+                }
+            }
+        }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <a href='/'>home</a>
+          </li>
+          <li>
+            <a href='/projects'>projects</a>
+          </li>
+          <li>
+            <a href='/resume'>resume</a>
+          </li>
+        </ul>
+      </nav>
+      <section class="title">
+        <h1>resume</h1>
+      </section>
+    </header>
+    <div class="resume">
+      <h2>My Resume</h2>
+      <div class="resumeLinks">
+        <a href="https://drive.google.com/file/d/1xvxKUKQCjsVNRopeYLKpndfXqc8v08XI/view?usp=sharing" target="_blank" rel="noreferrer noopener">
+            View online
+            <img src="/assets/external-link.svg" alt="external-link">
+        </a>
+        <a href="/Sebastian Darie - Web Development Resume.pdf" download="">
+            Download PDF 
+            <img src="/assets/download.svg" alt="download">
+        </a>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,11 +1,5 @@
 ---
-import { Markdown } from 'astro/components';
 import MainHead from '../components/MainHead.astro';
-import ProjectPreview from '../components/ProjectPreview/index.tsx';
-
-const projects = Astro.fetchContent('./project/*.md')
-  .filter(({ published_at }) => !!published_at)
-  .sort((a, b) => new Date(b.published_at) - new Date(a.published_at));
 ---
 
 <html lang="en">
@@ -127,11 +121,15 @@ const projects = Astro.fetchContent('./project/*.md')
         color: #007acc;
       }
 
+      .techIcon {
+        border: none !important;
+      }
+
       .sourceCode {
-        color: #3a4453;
+        color: var(--c-bg);
         text-decoration: none;
         background-color: transparent;
-        border: 3px solid #d9dee6;
+        border: 3px solid var(--c-font);
         padding: 5px 10px;
         border-radius: 2px;
         font-weight: 400;
@@ -139,8 +137,8 @@ const projects = Astro.fetchContent('./project/*.md')
         transition: 0.2s;
 
         &:hover {
-          color: #3a4453 !important;
-          background-color: #d9dee6;
+          color: var(--c-bg) !important;
+          background-color: var(--c-font);
           text-decoration: none !important;
         }
       }
@@ -157,11 +155,8 @@ const projects = Astro.fetchContent('./project/*.md')
             <a href='/projects'>projects</a>
           </li>
           <li>
-            <a href='/about'>about</a>
+            <a href='/resume'>resume</a>
           </li>
-          <!-- <li>
-            <a href='/'>home</a>
-          </li> -->
         </ul>
       </nav>
       <section class="title">
@@ -198,6 +193,11 @@ const projects = Astro.fetchContent('./project/*.md')
                   For styling it uses Styled-Components. It implements the suggested code-splitting methods by React like React.lazy and Suspense.
                   Some of its core features are user profiles, tweets, hearts, retweets, comments, following, search functionality both for users and tweets.
                 </p>
+                <div>
+                  <img src="/assets/icons8-react-native.svg" alt="react" class="techIcon">
+                  <img src="/assets/icons8-redux.svg" alt="redux" class="techIcon">
+                  <img src="/assets/icons8-firebase.svg" alt="firebase" class="techIcon">
+                </div>
                 <a href="https://github.com/SebastianDarie/Twitter-Clone" target="_blank" rel="noreferrer noopener" class="sourceCode">
                   Source Code
                 </a>
@@ -225,6 +225,15 @@ const projects = Astro.fetchContent('./project/*.md')
                   in my projects. For styling, it uses Chakra UI which provides a very convenient dark mode. It includes user profiles, 
                   communities, filtering posts, creation of 3 types of posts, comments(nested), upvotes, random avatars on user creation just like Reddit.
                 </p>
+                <div>
+                  <img src="/assets/icons8-react-native.svg" alt="react" class="techIcon">
+                  <img src="/assets/icons8-typescript.svg" alt="typescript" class="techIcon">
+                  <img src="/assets/icons8-nodejs.svg" alt="nodejs" class="techIcon">
+                  <img src="/assets/icons8-graphql.svg" alt="graphql" class="techIcon">
+                  <img src="/assets/icons8-apollo.svg" alt="apollo" class="techIcon">
+                  <img src="/assets/icons8-postgresql.svg" alt="postgresql" class="techIcon">
+                  <img src="/assets/icons8-redis.svg" alt="redis" class="techIcon">
+                </div>
                 <a href="https://github.com/SebastianDarie/reddit-clone" target="_blank" rel="noreferrer noopener" class="sourceCode">
                   Source Code
                 </a>
@@ -250,10 +259,21 @@ const projects = Astro.fetchContent('./project/*.md')
                   the app integrates Airbnb's core functionality like browsing listings based on location or map movement, reservations with
                   payments and refunds, category-based ratings with reviews, messaging between hosts and guests, and other smaller features.
                   This time for styling I choose <span class="graphql">Sass</span> instead of UI libraries. This was also my first time using
-                  <span class="postgres">Postgis</span> and the Google Maps API which worked flawlessly compared to other map providers like
+                  <span class="postgres">PostGIS</span> and the Google Maps API which worked flawlessly compared to other map providers like
                   Bing, Mapbox, Yandex, and Leaflet that don't have nearly as much support and packages available(especially for React).
                   I've also learned about the Stripe API which is easy to use and has good <span class="typescript">Typescript</span> support.
                 </p>
+                <div>
+                  <img src="/assets/icons8-react-native.svg" alt="react" class="techIcon">
+                  <img src="/assets/icons8-typescript.svg" alt="typescript" class="techIcon">
+                  <img src="/assets/icons8-nodejs.svg" alt="nodejs" class="techIcon">
+                  <img src="/assets/icons8-graphql.svg" alt="graphql" class="techIcon">
+                  <img src="/assets/icons8-apollo.svg" alt="apollo" class="techIcon">
+                  <img src="/assets/icons8-postgresql.svg" alt="postgresql" class="techIcon">
+                  <img src="/assets/icons8-redis.svg" alt="redis" class="techIcon">
+                  <img src="/assets/icons8-sass.svg" alt="sass" class="techIcon">
+                  <img src="/assets/icons8-google-maps.svg" alt="google-maps" class="techIcon">
+                </div>
                 <a href="https://github.com/SebastianDarie/airbnb-clone" target="_blank" rel="noreferrer noopener" class="sourceCode">
                   Source Code
                 </a>

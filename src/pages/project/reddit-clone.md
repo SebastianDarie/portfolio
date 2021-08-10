@@ -14,4 +14,8 @@ tags:
 live_url: https://reddit-clone.tech/
 ---
 
-<!-- This checkout page was made and designed for Precision Reloading with the intentions to bring them to a more modern stack. This single page application is built with Nuxt.js and Express on an IBM iSeries. The backend was integrated with their existing business suite written with RPG. This was very challenging due to the difficulty of working with the IBM iSeries as a web developer. I did all the dev-ops to get this running live, as well as designed the frontend and backend architecture. If you would like to login, you can use "register7@softaltern.com" for the username and "testtest" for the password. -->
+This site was built to include Reddit's core features. Features a new tech stack that I've never previously worked with
+including Next.js instead of the traditional CRA, <span class="graphql">GraphQL</span> with Apollo, as well as a relational
+database <span class="postgres">PostgreSQL</span>. It's also the first time I started using <span class="typescript">Typescript</span>
+in my projects. For styling, it uses Chakra UI which provides a very convenient dark mode. It includes user profiles,
+communities, filtering posts, creation of 3 types of posts, comments(nested), upvotes, random avatars on user creation just like Reddit.

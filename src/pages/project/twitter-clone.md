@@ -14,4 +14,8 @@ tags:
 live_url: https://twitter-clone-c0b2e.web.app/
 ---
 
-<!-- This checkout page was made and designed for Precision Reloading with the intentions to bring them to a more modern stack. This single page application is built with Nuxt.js and Express on an IBM iSeries. The backend was integrated with their existing business suite written with RPG. This was very challenging due to the difficulty of working with the IBM iSeries as a web developer. I did all the dev-ops to get this running live, as well as designed the frontend and backend architecture. If you would like to login, you can use "register7@softaltern.com" for the username and "testtest" for the password. -->
+This react app was made and designed to replicate Twitter's core functionality. This single page app
+is built with <span class="react">React(CRA)</span> and <span class="firebase">Firebase</span>.
+Firebase is used as a BaaS which provides all of the CRUD functionality, the data is then stored in Redux.
+For styling it uses Styled-Components. It implements the suggested code-splitting methods by React like React.lazy and Suspense.
+Some of its core features are user profiles, tweets, hearts, retweets, comments, following, search functionality both for users and tweets.
