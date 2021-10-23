@@ -11,7 +11,7 @@ tags:
   - google maps
   - postgis
   - sass
-live_url: https://mernlabs.team/
+live_url: https://airbnbclone.rent/
 ---
 
 This project was built with the hypebeast stack which benefits both the client and the developer. As the name implies
