@@ -168,7 +168,6 @@ import MainHead from '../components/MainHead.astro';
         <article class="about">
           <p>Here are some things I've worked on.</p>
           <p>Click on an image to be taken to the specific page on the site.</p>
-          <p>My information is on the home page.</p>
         </article>
         <section class="information">
           <ul class="project-showcase">
@@ -189,7 +188,7 @@ import MainHead from '../components/MainHead.astro';
                 <p class="text">
                   This react app was made and designed to replicate Twitter's core functionality. This single page app 
                   is built with <span class="react">React(CRA)</span> and <span class="firebase">Firebase</span>.
-                  Firebase is used as a BaaS which provides all of the CRUD functionality, the data is then stored in Redux. 
+                  Firebase is used as a BaaS which provides all of the CRUD functionality, the state is then stored in Redux.
                   For styling it uses Styled-Components. It implements the suggested code-splitting methods by React like React.lazy and Suspense.
                   Some of its core features are user profiles, tweets, hearts, retweets, comments, following, search functionality both for users and tweets.
                 </p>
@@ -205,17 +204,17 @@ import MainHead from '../components/MainHead.astro';
             </li>
 
             <li>
-              <a href="https://reddit-clone.tech/" target="_blank" rel="noreferrer noopener">
+              <a href="https://reddit-clone.me/" target="_blank" rel="noreferrer noopener">
                 <h2>Reddit Clone</h2>
               </a>
               <article>
-                <a href="https://reddit-clone.tech/" target="_blank" rel="noreferrer noopener">
+                <a href="https://reddit-clone.me/" target="_blank" rel="noreferrer noopener">
                   <img src="https://ik.imagekit.io/1nlnne3ilbe/tr:w-200,h-122/reddit-clone_T05cY5bVr.png?updatedAt=1629312824318&tr=w-1200,h-675,fo-auto" alt="home page">
                 </a>
-                <a href="https://reddit-clone.tech/user/ben" target="_blank" rel="noreferrer noopener">
+                <a href="https://reddit-clone.me/user/ben" target="_blank" rel="noreferrer noopener">
                   <img src="https://ik.imagekit.io/1nlnne3ilbe/tr:w-200,h-122/reddit-user_Br_ga_gQi.png?updatedAt=1629312824600&tr=w-1200,h-675,fo-auto" alt="user page">
                 </a>
-                <a href="https://reddit-clone.tech/r/React" target="_blank" rel="noreferrer noopener">
+                <a href="https://reddit-clone.me/r/React" target="_blank" rel="noreferrer noopener">
                   <img src="https://ik.imagekit.io/1nlnne3ilbe/tr:w-200,h-122/reddit-community_fT9LCO8_4.png?updatedAt=1629312824513&tr=w-1200,h-675,fo-auto" alt="community page">
                 </a>
                 <p class="text">
@@ -244,6 +243,8 @@ import MainHead from '../components/MainHead.astro';
               <a href="https://airbnbclone.rent" target="_blank" rel="noreferrer noopener">
                 <h2>Airbnb Clone</h2>
               </a>
+              <p>(the app is not deployed image links don't work)</p>
+
               <article>
                 <a href="https://airbnbclone.rent" target="_blank" rel="noreferrer noopener">
                   <img src="https://ik.imagekit.io/1nlnne3ilbe/tr:w-200,h-122/airbnb-clone_SrLrKhNiNE.png?updatedAt=1629312825686&tr=w-1200,h-675,fo-auto" alt="home page">
@@ -255,12 +256,10 @@ import MainHead from '../components/MainHead.astro';
                   <img src="https://ik.imagekit.io/1nlnne3ilbe/tr:w-200,h-122/airbnb-clone-room_ZlV2lXg1m.png?updatedAt=1629312824365&tr=w-1200,h-675,fo-auto" alt="room">
                 </a>
                 <p class="text">
-                  This project was built with the hypebeast stack which benefits both the client and the developer. As the name implies
-                  the app integrates Airbnb's core functionality like browsing listings based on location or map movement, reservations with
+                  The app integrates Airbnb's core functionality like browsing listings based on location or map movement, reservations with
                   payments and refunds, category-based ratings with reviews, messaging between hosts and guests, and other smaller features.
                   This time for styling I choose <span class="graphql">Sass</span> instead of UI libraries. This was also my first time using
-                  <span class="postgres">PostGIS</span> and the Google Maps API which worked flawlessly compared to other map providers like
-                  Bing, Mapbox, Yandex, and Leaflet that don't have nearly as much support and packages available(especially for React).
+                  <span class="postgres">PostGIS</span> and the Google Maps API which worked flawlessly.
                   I've also learned about the Stripe API which is easy to use and has good <span class="typescript">Typescript</span> support.
                 </p>
                 <div>
